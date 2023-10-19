@@ -1,14 +1,16 @@
+import loadable from '@loadable/component'
 import { Navigate, useRoutes } from "react-router-dom";
-import { AdminLayout } from "../layouts/admin/AdminLayout";
+
+const AdminLayout = loadable(() => import('../layouts/admin/AdminLayout'))
 
 const Router = () => {
   let element = useRoutes([
     {
       path: '/',
-      element: <Navigate to='/asid-admin' />,
+      element: <Navigate to='/admin-panel' />,
     },
     {
-      path: '/asid-admin',
+      path: '/admin-panel',
       element: <AdminLayout />,
       children: [
         {

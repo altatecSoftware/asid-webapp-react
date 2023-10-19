@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom"
 import { Navbar, PrincipalCard, Sidebar } from "../../components/ui"
 
-export const AdminLayout = () => {
+const AdminLayout = () => {
     return (
         <>
             <PrincipalCard>
@@ -14,3 +14,5 @@ export const AdminLayout = () => {
         </>
     )
 }
+
+export default AdminLayout
